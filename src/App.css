@@ -1,0 +1,436 @@
+/* COMMON STYLES */
+* {
+  font-family: "Poiret One", cursive;
+}
+.settings-image {
+  display: flex;
+  max-width: 50%;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-bottom: 10%;
+}
+.forDesktop {
+  display: none;
+}
+
+h3 {
+  color: rgba(150, 150, 150, 1);
+  font-size: 2rem;
+}
+
+button {
+  background: transparent;
+  border: 2px solid rgba(150, 150, 150, 1);
+  padding: 0.5em 1em;
+  width: calc(80% + 0.2em);
+  margin: 1em 0 1.5em 0;
+  letter-spacing: 0.1em;
+}
+
+button i {
+  font-size: 1.2rem;
+  margin: auto 0;
+}
+
+.contentContainer {
+  margin: 1.5em 0;
+  padding: 1em;
+}
+
+.text {
+  margin: 1em 0;
+}
+
+.bolded {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (min-width: 1030px) and (max-width: 3000px) {
+  .forMobile {
+    display: none !important;
+  }
+
+  .forDesktop {
+    display: block;
+  }
+
+  .contentContainer {
+    display: flex;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .contentContainer img {
+    max-width: 50%;
+  }
+
+  .contentContainer p {
+    max-width: 40%;
+    display: inline;
+    margin: 0 2em;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1028px) {
+  .forMobile {
+    display: none !important;
+  }
+
+  .forDesktop {
+    display: block;
+  }
+
+  .contentContainer {
+    display: flex;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .contentContainer img {
+    max-width: 50%;
+  }
+
+  .contentContainer p {
+    max-width: 40%;
+    display: inline;
+    margin: 0 2em;
+  }
+}
+
+/* HEADER STYLES */
+@media (min-width: 1030px) and (max-width: 3000px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 3em auto;
+  }
+
+  .header img {
+    max-height: 50vh;
+    flex: 1;
+    margin: 0 1em;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1028px) {
+  .header {
+    display: none;
+    flex-direction: column;
+    width: 80%;
+    margin: 3em auto;
+  }
+}
+/* NAVBAR STYLES */
+@media (min-width: 1030px) and (max-width: 3000px) {
+  nav {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .socialIcons {
+    color: rgba(150, 150, 150, 1);
+    margin-right: 1em;
+  }
+
+  nav .socialIcons i {
+    margin: 0 0.5em;
+  }
+
+  nav h3 {
+    margin: 0 0 0 1em;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1028px) {
+  nav {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .socialIcons {
+    color: rgba(150, 150, 150, 1);
+    margin-right: 1em;
+  }
+
+  nav .socialIcons i {
+    margin: 0 0.5em;
+  }
+
+  nav h3 {
+    margin: 0 0 0 1em;
+  }
+}
+/* HEADERCAROUSEL STYLES */
+.headerCarousel {
+  width: 90%;
+  max-height: 50vh;
+  position: relative;
+  margin: auto;
+  z-index: 0;
+}
+
+.headerCarousel img {
+  width: 100%;
+  max-height: 350px;
+}
+
+.headerCarousel .fa-arrow-alt-circle-right {
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  color: rgba(180, 180, 180, 1);
+  font-size: 2rem;
+  display: none; /* Leaving the code here since maybe, adding back later */
+}
+
+.headerCarousel .fa-arrow-alt-circle-left {
+  position: absolute;
+  top: 50%;
+  left: 0.5em;
+  color: rgba(180, 180, 180, 1);
+  font-size: 2rem;
+  display: none; /* Leaving the code here since maybe, adding back later */
+}
+
+.headerCarousel .activeCircles {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.headerCarousel .activeCircles .circle {
+  border: 2px solid rgba(180, 180, 180, 1);
+  border-radius: 360px;
+  height: 30px;
+  width: 30px;
+  margin: 0 0.5em;
+  padding: 0.05em;
+}
+
+.headerCarousel .activeCircles .circle .innerCircle {
+  border: 2px solid rgba(180, 180, 180, 1);
+  background: rgba(180, 180, 180, 1);
+  border-radius: 360px;
+  width: 80%;
+  height: 80%;
+  margin: 0.05em 0 0 0.05em;
+}
+
+.headerCarousel .carouselHeadline {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: -1px -1px 0 rgba(180, 180, 180, 1);
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 800px) and (max-width: 1028px) {
+  .forTablet {
+    display: block !important;
+  }
+  .headerCarousel {
+    width: 50%;
+    min-height: 500px;
+    margin: 4em auto 0 auto;
+  }
+
+  .headerCarousel img {
+    height: 500px;
+  }
+
+  .headerCarousel .activeCircles {
+    bottom: 10em;
+  }
+
+  .headerCarousel .fa-arrow-alt-circle-right,
+  .headerCarousel .fa-arrow-alt-circle-left {
+    top: 30%;
+    display: block !important;
+  }
+
+  .headerCarousel .activeCircles .circle .innerCircle {
+    margin: 0.05em 0 0 0.05em;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 980px) {
+  .forTablet {
+    display: block !important;
+  }
+  .headerCarousel {
+    width: 50%;
+    min-height: 500px;
+    margin: 4em auto 0 auto;
+  }
+
+  .headerCarousel img {
+    height: 380px;
+  }
+
+  .headerCarousel .activeCircles {
+    bottom: 10em;
+  }
+
+  .headerCarousel .activeCircles .circle .innerCircle {
+    margin: 0.05em 0 0 0.05em;
+  }
+
+  .headerCarousel .fa-arrow-alt-circle-right,
+  .headerCarousel .fa-arrow-alt-circle-left {
+    top: 30%;
+    display: block;
+  }
+}
+/* HEADLINEANDTEXT STYLES */
+.headlineAndText {
+  color: rgb(153, 11, 11);
+}
+
+@media (min-width: 1030px) and (max-width: 3000px) {
+  .headlineAndText {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .headlineAndText p {
+    flex: 1;
+  }
+  .headlineAndText h3 {
+    width: 100%;
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1028px) {
+  .headlineAndText {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em 0;
+  }
+  .headlineAndText p {
+    flex: 1;
+  }
+  .headlineAndText h3 {
+    width: 100%;
+    margin-left: 1em;
+  }
+}
+
+/* MODALBUTTON STYLES */
+.modalButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalButtonContainer h3 {
+  text-align: center;
+}
+/* MODAL STYLES */
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  animation: appearAnim 0.5s;
+}
+
+@keyframes appearAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalBackground .modalWrapper {
+  width: 90%;
+  height: 55%;
+  margin-top: 3em;
+  background: #eee;
+  z-index: 1030;
+}
+
+.modalBackground .modalWrapper .modalContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.modalBackground .modalWrapper .modalContent .fa-times {
+  font-size: 1.5rem;
+  align-self: flex-end;
+  margin: 0.5em 0.5em 0 0;
+}
+
+.modalBackground .modalWrapper .modalContent .modalForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalBackground .modalWrapper .modalContent .modalForm .modalInput {
+  border: 1px solid rgba(150, 150, 150, 1);
+  margin: 0.8em 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2em;
+  width: 80%;
+}
+
+.modalBackground .modalWrapper .modalContent .modalForm .modalInput i {
+  margin: 0 0.5em;
+}
+
+.modalBackground .modalWrapper .modalContent .modalForm .modalInput input {
+  border: none;
+  background: transparent;
+}
+
+@media (min-width: 1030px) and (max-width: 3000px) {
+  .modalWrapper {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1028px) {
+  .modalBackground .modalWrapper {
+    height: 25%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 980px) {
+  .modalBackground .modalWrapper {
+    height: 35%;
+  }
+}
+/* FOOTER STYLES*/
+.footer {
+  margin: 2em;
+  border-top: 1px solid rgba(150, 150, 150, 1);
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
